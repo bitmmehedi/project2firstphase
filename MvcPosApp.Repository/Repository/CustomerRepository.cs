@@ -61,5 +61,11 @@ namespace MvcPosApp.Repository.Repository
             return db.CustomerModels.ToList();
         }
 
+        public CustomerModel IsExist(int CustCode)
+        {
+            CustomerModel aCustomer = db.CustomerModels.FirstOrDefault(c => c.CustCode == CustCode);
+            return aCustomer;
+        }
+
     }
 }

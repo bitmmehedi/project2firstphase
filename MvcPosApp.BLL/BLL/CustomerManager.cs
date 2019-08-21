@@ -33,5 +33,10 @@ namespace MvcPosApp.BLL.BLL
         {
             return _customerRepository.FindAll();
         }
+
+        public CustomerModel IsExist(int CustCode)
+        {
+            return _customerRepository.IsExist(CustCode);
+        }
     }
 }

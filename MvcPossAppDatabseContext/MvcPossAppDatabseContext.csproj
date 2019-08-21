@@ -81,21 +81,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\DatabaseContext.cs" />
-    <Compile Include="Migrations\201907281849545_addedsomefield.cs" />
-    <Compile Include="Migrations\201907281849545_addedsomefield.Designer.cs">
-      <DependentUpon>201907281849545_addedsomefield.cs</DependentUpon>
+    <Compile Include="Migrations\201908191727548_initialstate.cs" />
+    <Compile Include="Migrations\201908191727548_initialstate.Designer.cs">
+      <DependentUpon>201908191727548_initialstate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907281932458_addedsomefield1.cs" />
-    <Compile Include="Migrations\201907281932458_addedsomefield1.Designer.cs">
-      <DependentUpon>201907281932458_addedsomefield1.cs</DependentUpon>
+    <Compile Include="Migrations\201908191754409_changesomething.cs" />
+    <Compile Include="Migrations\201908191754409_changesomething.Designer.cs">
+      <DependentUpon>201908191754409_changesomething.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907290603397_addcustomerlist.cs" />
-    <Compile Include="Migrations\201907290603397_addcustomerlist.Designer.cs">
-      <DependentUpon>201907290603397_addcustomerlist.cs</DependentUpon>
+    <Compile Include="Migrations\201908191815167_changesomethiss.cs" />
+    <Compile Include="Migrations\201908191815167_changesomethiss.Designer.cs">
+      <DependentUpon>201908191815167_changesomethiss.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,14 +109,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907281849545_addedsomefield.resx">
-      <DependentUpon>201907281849545_addedsomefield.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908191727548_initialstate.resx">
+      <DependentUpon>201908191727548_initialstate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907281932458_addedsomefield1.resx">
-      <DependentUpon>201907281932458_addedsomefield1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908191754409_changesomething.resx">
+      <DependentUpon>201908191754409_changesomething.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907290603397_addcustomerlist.resx">
-      <DependentUpon>201907290603397_addcustomerlist.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908191815167_changesomethiss.resx">
+      <DependentUpon>201908191815167_changesomethiss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

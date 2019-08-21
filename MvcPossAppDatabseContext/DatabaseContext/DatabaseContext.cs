@@ -10,5 +10,7 @@ namespace MvcPossAppDatabseContext.DatabaseContext
     public class DatabaseContext: DbContext
     {
         public DbSet<CustomerModel> CustomerModels { set; get; }
+        public DbSet<Sale> Sales { set; get; }
+        public DbSet<SalesDetails> SalesDetails { set; get; }
     }
 }

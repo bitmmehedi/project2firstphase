@@ -22,6 +22,7 @@ namespace MvcPosApp.Controllers
         [HttpPost]
         public ActionResult Insert(CustomerModel customerModel)
         {
+            
             if (ModelState.IsValid)
             {
                 if (_customerManager.Insert(customerModel))
@@ -75,12 +76,12 @@ namespace MvcPosApp.Controllers
             
             if (_customerManager.Delete(_customerModel))
             {
-                ViewBag.SuccessMsg = "Data Deleted SuccessFully!";
+                ViewBag.SuccessMsg = "Data Delete SuccessFully!";
                 Response.Redirect("FindAll");
             }
             else
             {
-                ViewBag.FailMsg = "Data Deleted Fail!";
+                ViewBag.FailMsg = "Data Delete Fail!";
                 Response.Redirect("FindAll");
             }
            
@@ -102,6 +103,12 @@ namespace MvcPosApp.Controllers
             }
             customerModel.Customers = customers;
             return View(customerModel);
+        }
+        public JsonResult IsExist(int CustCode)
+        {
+            var customer = _customerManager.IsExist(CustCode);
+
+            return Json(customer, JsonRequestBehavior.AllowGet);
         }
 
     }

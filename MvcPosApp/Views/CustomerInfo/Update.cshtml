@@ -241,63 +241,62 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-
                                     <form class="form-horizontal form-label-left" novalidate action="" method="post" enctype="multipart/form-data">
                                         <span class="section">Customer Information</span>
 
                                         <div class="item form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CustCode">
-                                                Code <span class="required">*</span>
+                                                @Html.LabelFor(c => c.CustCode) <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="Code" class="form-control col-md-7 col-xs-12" name="CustCode" placeholder="1001" required="required" type="text" value="@Model.CustCode">
+                                                @Html.TextBoxFor(c => c.CustCode, Model.CustCode.ToString(), htmlAttributes: new { @class = "form-control col-md-7 col-xs-12", required = "required", placeholder = "1001" })
                                             </div>
                                         </div>
                                         <div class="item form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CustName">
-                                                Name <span class="required">*</span>
+                                                @Html.LabelFor(c => c.CustName) <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="CustName" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="CustName" required="required" placeholder="both name(s) e.g Md Mehedi" type="text" value="@Model.CustName">
+                                                @Html.TextBoxFor(c => c.CustName, Model.CustName, htmlAttributes: new { @class = "form-control col-md-7 col-xs-12", required = "required", placeholder = "both name(s) e.g Md Mehedi" })
                                             </div>
                                         </div>
                                         <div class="item form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CustEmail">
-                                                Email <span class="required"></span>
+                                                @Html.LabelFor(c => c.CustEmail) <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="email" id="CustEmail" name="CustEmail" class="form-control col-md-7 col-xs-12" value="@Model.CustEmail">
+                                                @Html.TextBoxFor(c => c.CustEmail, Model.CustEmail, htmlAttributes: new { @class = "form-control col-md-7 col-xs-12", required = "required", placeholder = "example@gmail.com" })
                                             </div>
                                         </div>
 
                                         <div class="item form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CustContact">
-                                                Contact <span class="required">*</span>
+                                                @Html.LabelFor(c => c.CustContact) <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="number" id="CustContact" name="CustContact" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value="@Model.CustContact">
+                                                @Html.TextBoxFor(c => c.CustContact, Model.CustContact.ToString(), htmlAttributes: new { @class = "form-control col-md-7 col-xs-12", required = "required", placeholder = "01316347466" })
                                             </div>
                                         </div>
                                         <div class="item form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
-                                                Loyalty Points <span class="required"></span>
+                                                @Html.LabelFor(c => c.CustLoyaltyPoints) <span class="required"></span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="number" id="CustLoyaltyPoints" name="CustLoyaltyPoints" class="form-control col-md-7 col-xs-12" value="@Model.CustLoyaltyPoints">
+                                                @Html.TextBoxFor(c => c.CustLoyaltyPoints, Model.CustLoyaltyPoints.ToString(), htmlAttributes: new { @class = "form-control col-md-7 col-xs-12", placeholder = "500" })
                                             </div>
                                         </div>
                                         <div class="item form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CustAddress">
-                                                Address <span class="required"></span>
+                                                @Html.LabelFor(c => c.CustAddress) <span class="required"></span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea id="CustAddress" required="required" name="CustAddress" class="form-control col-md-7 col-xs-12">@Model.CustAddress</textarea>
+                                                @Html.TextAreaFor(c => c.CustAddress, htmlAttributes: new { @class = "form-control col-md-7 col-xs-12" })
                                             </div>
                                         </div>
                                         <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class="col-md-6 col-md-offset-3">
-                                                <button id="Save" type="submit" class="btn btn-success">Update</button>
+                                                <button id="Save" type="submit" class="btn btn-success">Submit</button>
                                                 <button type="button" class="btn btn-primary">Cancel</button>
                                             </div>
                                         </div>

@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -110,6 +113,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\green.css" />
     <Content Include="Content\jqvmap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\vendors\nprogress\nprogress.js" />
     <Content Include="Content\_all.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -169,9 +173,15 @@
     <Content Include="Scripts\jquery.flot.stack.js" />
     <Content Include="Scripts\jquery.flot.time.js" />
     <Content Include="Scripts\jquery.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\jquery.vmap.min.js" />
     <Content Include="Scripts\jquery.vmap.sampledata.js" />
     <Content Include="Scripts\jquery.vmap.world.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\nprogress.js" />
     <Content Include="Scripts\popper-utils.js" />
@@ -199,9 +209,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustomerInfoController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BatchSalesAdd.cs" />
+    <Compile Include="Models\CustomerVM.cs" />
+    <Compile Include="Models\SalesSaveViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +229,15 @@
     <Content Include="Views\CustomerInfo\Update.cshtml" />
     <Content Include="Views\CustomerInfo\Delete.cshtml" />
     <Content Include="Views\CustomerInfo\FindAll.cshtml" />
+    <Content Include="Views\CustomerInfo\addForm.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Dashboard.cshtml" />
+    <Content Include="Views\Sales\Save.cshtml" />
+    <Content Include="Views\Sales\FindAll.cshtml" />
+    <Content Include="Views\Sales\BatchSalesAdd.cshtml" />
+    <Content Include="Views\Sales\VoucherDetails.cshtml" />
+    <Content Include="Views\Sales\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -224,7 +247,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

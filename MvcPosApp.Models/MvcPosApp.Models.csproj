@@ -57,6 +57,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\MvcPosApp\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -79,6 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\Sale.cs" />
+    <Compile Include="Models\SalesDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
